@@ -1,0 +1,11 @@
+tensorflow
+keras
+opencv-python
+numpy
+ipykernel
+matplotlib
+scikit-learn
+torch 
+torchvision 
+pillow 
+matplotlib
