@@ -62,9 +62,11 @@ CLASS_NAMES = [
 ]
 
 @st.cache_resource
-def load_trained_model(model_path="rvl_cdip_cnn_model.pth"):
-    """Loads the trained ResNet-18 model architecture and weights."""
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+def load_trained_model():
+    model_path = os.path.join(
+        os.path.dirname(__file__),
+        "rvl_cdip_cnn_model.pth"
+    )
     
     # Rebuild ResNet-18 architecture matching training setup
     model = models.resnet18(weights=None)
@@ -132,7 +134,7 @@ st.markdown('<div class="main-header">📄 Document Classifier AI</div>', unsafe
 st.markdown('<div class="sub-header">Upload a scanned document image (invoice, form, letter, etc.) to identify its class using Deep Learning.</div>', unsafe_allow_html=True)
 
 # Load Model
-model, device, is_model_loaded = load_trained_model("rvl_cdip_cnn_model.pth")
+model, device, is_model_loaded = load_trained_model()
 
 if not is_model_loaded:
     st.warning("⚠️ Weights file `rvl_cdip_cnn_model.pth` not found in the directory! Running in demo/untrained mode.")
