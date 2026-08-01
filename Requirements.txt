@@ -1,11 +1,12 @@
 tensorflow
 keras
-opencv-python
+opencv-python-headless
 numpy
 ipykernel
 matplotlib
 scikit-learn
-torch 
-torchvision 
-pillow 
-matplotlib
+pillow
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.3.1
+torchvision==0.18.1
