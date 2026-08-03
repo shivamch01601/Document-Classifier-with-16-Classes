@@ -1,0 +1,15 @@
+torch
+torchvision
+pillow
+numpy
+tqdm
+matplotlib
+scikit-learn
+streamlit
+onnx
+onnxscript
+torch-directml
+streamlit
+onnxruntime
+pillow
+numpy
